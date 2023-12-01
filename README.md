@@ -8,10 +8,5 @@ Docker Container Setup for Replication Destination
     ```
 3. Clone this repository on the replication destination server.
 4. Copy and edit the example config files (`config/docker.env` and `config/pgpass`).
-5. Change the ownership of `config/pgpass` to `postgres`:
-    ```sh
-    sudo chown 999:999 config/pgpass
-    ```
-    (where `999:999` represents `postgres:postgres` inside the container)
-7. Ensure the master server is running with the configuration set in step 1 and is accessible from the replication destination.
-8. Launch the container: `docker compose up -d`
+5. Ensure the master server is running with the configuration set in step 1 and is accessible from the replication destination.
+6. Launch the container: `docker compose up -d`

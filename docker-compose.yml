@@ -7,6 +7,6 @@ services:
   volumes:
     - ./data:/var/lib/postgresql/data
     - ./entrypoint.sh:/etc/postgresql/entrypoint.sh
-    - ./pgpass:/var/lib/postgresql/.pgpass
+    - ./config/pgpass:/var/lib/postgresql/.pgpass
   env_file:
-    - docker.env
+    - ./config/docker.env

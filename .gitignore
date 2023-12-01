@@ -1,0 +1,3 @@
+config/*
+!config/docker.env.example
+!config/pgpass.example

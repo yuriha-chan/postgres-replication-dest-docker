@@ -1,0 +1,12 @@
+version: '3'
+services:
+ postgresql-replication:
+  image: 'postgres:15'
+  network_mode: 'host'
+  entrypoint: /etc/postgresql/entrypoint.sh
+  volumes:
+    - ./data:/var/lib/postgresql/data
+    - ./entrypoint.sh:/etc/postgresql/entrypoint.sh
+    - ./pgpass:/var/lib/postgresql/.pgpass
+  env_file:
+    - docker.env
